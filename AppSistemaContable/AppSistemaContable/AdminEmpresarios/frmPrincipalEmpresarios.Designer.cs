@@ -1,6 +1,6 @@
-﻿namespace AppSistemaContable.ActividadEconomica
+﻿namespace AppSistemaContable.AdminEmpresarios
 {
-    partial class frmPrincipalActividadEconómica
+    partial class frmPrincipalEmpresarios
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvListado = new System.Windows.Forms.DataGridView();
+            this.txtBuscar = new DevExpress.XtraEditors.TextEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barraHerramientasFormulario = new DevExpress.XtraBars.Bar();
             this.btnAtras = new DevExpress.XtraBars.BarLargeButtonItem();
@@ -47,28 +48,19 @@
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtBuscar = new DevExpress.XtraEditors.TextEdit();
+            this.gbTelefonos = new System.Windows.Forms.GroupBox();
+            this.dgvTelefonos = new System.Windows.Forms.DataGridView();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.chxHabilitado = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).BeginInit();
+            this.gbTelefonos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTelefonos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chxHabilitado.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.Blue;
-            this.lblTitulo.Location = new System.Drawing.Point(3, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(65, 29);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Nombre";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvListado
             // 
@@ -77,13 +69,27 @@
             this.dgvListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dgvListado, 3);
-            this.dgvListado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListado.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvListado.Location = new System.Drawing.Point(3, 32);
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListado.Size = new System.Drawing.Size(860, 191);
+            this.dgvListado.Size = new System.Drawing.Size(660, 348);
             this.dgvListado.TabIndex = 2;
             this.dgvListado.TabStop = false;
+            this.dgvListado.Click += new System.EventHandler(this.dgvListado_Click);
+            this.dgvListado.DoubleClick += new System.EventHandler(this.dgvListado_DoubleClick);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(74, 3);
+            this.txtBuscar.MenuManager = this.barManager1;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Properties.Appearance.Options.UseFont = true;
+            this.txtBuscar.Size = new System.Drawing.Size(322, 22);
+            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.ToolTip = "Escribe el nombre a buscar";
+            this.txtBuscar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
             // barManager1
             // 
@@ -186,28 +192,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(866, 87);
+            this.barDockControlTop.Size = new System.Drawing.Size(830, 87);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 310);
-            this.barDockControlBottom.Size = new System.Drawing.Size(866, 23);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 470);
+            this.barDockControlBottom.Size = new System.Drawing.Size(830, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 87);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 223);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 383);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(866, 87);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 223);
+            this.barDockControlRight.Location = new System.Drawing.Point(830, 87);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 383);
             // 
             // barEditItem1
             // 
@@ -223,10 +229,12 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.gbTelefonos, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.dgvListado, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblTitulo, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtBuscar, 1, 0);
@@ -237,53 +245,81 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(866, 223);
-            this.tableLayoutPanel1.TabIndex = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(830, 383);
+            this.tableLayoutPanel1.TabIndex = 9;
             // 
-            // txtBuscar
+            // gbTelefonos
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(74, 3);
-            this.txtBuscar.MenuManager = this.barManager1;
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Properties.Appearance.Options.UseFont = true;
-            this.txtBuscar.Size = new System.Drawing.Size(528, 22);
-            this.txtBuscar.TabIndex = 1;
-            this.txtBuscar.ToolTip = "Escribe el nombre a buscar";
-            this.txtBuscar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.gbTelefonos.Controls.Add(this.dgvTelefonos);
+            this.gbTelefonos.Dock = System.Windows.Forms.DockStyle.Right;
+            this.gbTelefonos.Location = new System.Drawing.Point(669, 32);
+            this.gbTelefonos.Name = "gbTelefonos";
+            this.gbTelefonos.Size = new System.Drawing.Size(158, 348);
+            this.gbTelefonos.TabIndex = 14;
+            this.gbTelefonos.TabStop = false;
+            this.gbTelefonos.Text = "Teléfonos";
+            // 
+            // dgvTelefonos
+            // 
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SkyBlue;
+            this.dgvTelefonos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTelefonos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvTelefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTelefonos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTelefonos.Location = new System.Drawing.Point(3, 17);
+            this.dgvTelefonos.Name = "dgvTelefonos";
+            this.dgvTelefonos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTelefonos.Size = new System.Drawing.Size(152, 328);
+            this.dgvTelefonos.TabIndex = 0;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Blue;
+            this.lblTitulo.Location = new System.Drawing.Point(3, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(65, 29);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Nombre";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chxHabilitado
             // 
-            this.chxHabilitado.Location = new System.Drawing.Point(608, 3);
+            this.chxHabilitado.Location = new System.Drawing.Point(402, 3);
             this.chxHabilitado.MenuManager = this.barManager1;
             this.chxHabilitado.Name = "chxHabilitado";
             this.chxHabilitado.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chxHabilitado.Properties.Appearance.Options.UseFont = true;
             this.chxHabilitado.Properties.Caption = "Habilitado";
-            this.chxHabilitado.Size = new System.Drawing.Size(147, 23);
+            this.chxHabilitado.Size = new System.Drawing.Size(108, 23);
             this.chxHabilitado.TabIndex = 2;
             this.chxHabilitado.ToolTip = "Ver los registros habilitados/deshabilitados de  la lista";
             // 
-            // frmPrincipalActividadEconómica
+            // frmPrincipalEmpresarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 333);
+            this.ClientSize = new System.Drawing.Size(830, 493);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Name = "frmPrincipalActividadEconómica";
+            this.Name = "frmPrincipalEmpresarios";
             this.ShowIcon = false;
-            this.Text = "Listado de actividades económicas";
+            this.Text = "Listado de empresarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).EndInit();
+            this.gbTelefonos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTelefonos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chxHabilitado.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -291,9 +327,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView dgvListado;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label lblTitulo;
+        private DevExpress.XtraEditors.TextEdit txtBuscar;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar barraHerramientasFormulario;
         private DevExpress.XtraBars.BarLargeButtonItem btnAtras;
@@ -308,7 +345,8 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private DevExpress.XtraEditors.TextEdit txtBuscar;
         private DevExpress.XtraEditors.CheckEdit chxHabilitado;
+        private System.Windows.Forms.GroupBox gbTelefonos;
+        private System.Windows.Forms.DataGridView dgvTelefonos;
     }
 }

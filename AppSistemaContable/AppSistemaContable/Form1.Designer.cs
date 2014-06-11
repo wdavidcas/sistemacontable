@@ -58,6 +58,7 @@
             this.btnVentas = new DevExpress.XtraBars.BarButtonItem();
             this.btnCompras = new DevExpress.XtraBars.BarButtonItem();
             this.btnActividadEconomica = new DevExpress.XtraBars.BarButtonItem();
+            this.btnOrganizacionLegal = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
             this.administracionRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -67,6 +68,7 @@
             this.rpgImpuesto = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgTiposPago = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupActividadEconomica = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.helpRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.helpRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.skinsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -76,8 +78,6 @@
             this.rpgCompras = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.pbImagenFondo = new System.Windows.Forms.PictureBox();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnOrganizacionLegal = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
@@ -318,6 +318,7 @@
             this.btnEmpresas.LargeGlyph = global::AppSistemaContable.Properties.Resources.edificio;
             this.btnEmpresas.LargeGlyphDisabled = global::AppSistemaContable.Properties.Resources.edificio;
             this.btnEmpresas.Name = "btnEmpresas";
+            this.btnEmpresas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEmpresas_ItemClick);
             // 
             // btnEmpresarios
             // 
@@ -326,6 +327,7 @@
             this.btnEmpresarios.Id = 64;
             this.btnEmpresarios.LargeGlyph = global::AppSistemaContable.Properties.Resources.usuarios;
             this.btnEmpresarios.Name = "btnEmpresarios";
+            this.btnEmpresarios.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEmpresarios_ItemClick);
             // 
             // btnRegimen
             // 
@@ -354,6 +356,7 @@
             this.btnVentas.Hint = "Registrar ventas de la empresa";
             this.btnVentas.Id = 68;
             this.btnVentas.Name = "btnVentas";
+            this.btnVentas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVentas_ItemClick);
             // 
             // btnCompras
             // 
@@ -361,6 +364,7 @@
             this.btnCompras.Hint = "Registro de compras";
             this.btnCompras.Id = 69;
             this.btnCompras.Name = "btnCompras";
+            this.btnCompras.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCompras_ItemClick);
             // 
             // btnActividadEconomica
             // 
@@ -369,6 +373,14 @@
             this.btnActividadEconomica.Id = 70;
             this.btnActividadEconomica.Name = "btnActividadEconomica";
             this.btnActividadEconomica.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnActividadEconomica_ItemClick);
+            // 
+            // btnOrganizacionLegal
+            // 
+            this.btnOrganizacionLegal.Caption = "Organización legal";
+            this.btnOrganizacionLegal.Hint = "Catálogo de organizaciones legales";
+            this.btnOrganizacionLegal.Id = 71;
+            this.btnOrganizacionLegal.Name = "btnOrganizacionLegal";
+            this.btnOrganizacionLegal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnOrganizacionLegal_ItemClick);
             // 
             // ribbonImageCollectionLarge
             // 
@@ -432,6 +444,12 @@
             this.ribbonPageGroupActividadEconomica.ItemLinks.Add(this.btnActividadEconomica);
             this.ribbonPageGroupActividadEconomica.Name = "ribbonPageGroupActividadEconomica";
             this.ribbonPageGroupActividadEconomica.Text = "Actividad económica";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnOrganizacionLegal);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // helpRibbonPage
             // 
@@ -498,25 +516,12 @@
             this.pbImagenFondo.TabIndex = 3;
             this.pbImagenFondo.TabStop = false;
             // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnOrganizacionLegal);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
-            // 
-            // btnOrganizacionLegal
-            // 
-            this.btnOrganizacionLegal.Caption = "Organización legal";
-            this.btnOrganizacionLegal.Hint = "Catálogo de organizaciones legales";
-            this.btnOrganizacionLegal.Id = 71;
-            this.btnOrganizacionLegal.Name = "btnOrganizacionLegal";
-            this.btnOrganizacionLegal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnOrganizacionLegal_ItemClick);
-            // 
             // Form1
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1100, 700);
             this.Controls.Add(this.pbImagenFondo);
             this.Controls.Add(this.ribbonControl);

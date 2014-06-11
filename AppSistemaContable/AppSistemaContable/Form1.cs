@@ -60,5 +60,58 @@ namespace AppSistemaContable
             organizacionLegal.Show();
         }
 
+        /// <summary>
+        /// VENTAS>>REGISTRO DE VENTAS
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnVentas_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.pbImagenFondo.Visible = false;
+            VentasRegistroVentas.frmNuevaVenta nueva = new VentasRegistroVentas.frmNuevaVenta();
+            nueva.MdiParent = this;
+            nueva.Show();
+            
+        }
+
+        /// <summary>
+        /// COMPRAS>>REGISTRO DE COMPRAS
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCompras_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.pbImagenFondo.Visible = false;
+            ComprasRegistroCompras.frmNuevaCompra nueva = new ComprasRegistroCompras.frmNuevaCompra();
+            nueva.MdiParent = this;
+            nueva.Show();
+        }
+
+        /// <summary>
+        /// ADMINISTRACION>>EMPRESAS
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnEmpresas_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.pbImagenFondo.Visible = false;
+            AdminEmpresas.frmPrincipalEmpresas empresas = new AdminEmpresas.frmPrincipalEmpresas();
+            empresas.MdiParent = this;
+            empresas.Show();
+        }
+
+        /// <summary>
+        /// ADMINISTRACION>>EMPRESARIOS
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnEmpresarios_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.pbImagenFondo.Visible = false;
+            AdminEmpresarios.frmPrincipalEmpresarios empresarios = new AdminEmpresarios.frmPrincipalEmpresarios();
+            empresarios.MdiParent = this;
+            empresarios.Show();
+        }
+
     }
 }

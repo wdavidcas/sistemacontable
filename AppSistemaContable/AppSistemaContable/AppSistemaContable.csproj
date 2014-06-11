@@ -83,6 +83,42 @@
     <Compile Include="ActividadEconomica\frmPrincipalActividadEconómica.Designer.cs">
       <DependentUpon>frmPrincipalActividadEconómica.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminEmpresarios\frmAgregaEditaEmpresario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEmpresarios\frmAgregaEditaEmpresario.Designer.cs">
+      <DependentUpon>frmAgregaEditaEmpresario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEmpresarios\frmPrincipalEmpresarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEmpresarios\frmPrincipalEmpresarios.Designer.cs">
+      <DependentUpon>frmPrincipalEmpresarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEmpresas\frmAgregaEditaEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEmpresas\frmAgregaEditaEmpresa.Designer.cs">
+      <DependentUpon>frmAgregaEditaEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEmpresas\frmPrincipalEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEmpresas\frmPrincipalEmpresas.Designer.cs">
+      <DependentUpon>frmPrincipalEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComprasRegistroCompras\frmNuevaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComprasRegistroCompras\frmNuevaCompra.Designer.cs">
+      <DependentUpon>frmNuevaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComprasRegistroCompras\frmPrincipalCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComprasRegistroCompras\frmPrincipalCompras.Designer.cs">
+      <DependentUpon>frmPrincipalCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,8 +133,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentasRegistroVentas\frmNuevaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasRegistroVentas\frmNuevaVenta.Designer.cs">
+      <DependentUpon>frmNuevaVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentasRegistroVentas\frmPrincipalVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasRegistroVentas\frmPrincipalVentas.Designer.cs">
+      <DependentUpon>frmPrincipalVentas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ActividadEconomica\frmPrincipalActividadEconómica.resx">
       <DependentUpon>frmPrincipalActividadEconómica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminEmpresarios\frmPrincipalEmpresarios.resx">
+      <DependentUpon>frmPrincipalEmpresarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminEmpresas\frmAgregaEditaEmpresa.resx">
+      <DependentUpon>frmAgregaEditaEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminEmpresas\frmPrincipalEmpresas.resx">
+      <DependentUpon>frmPrincipalEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComprasRegistroCompras\frmNuevaCompra.resx">
+      <DependentUpon>frmNuevaCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -117,6 +177,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VentasRegistroVentas\frmNuevaVenta.resx">
+      <DependentUpon>frmNuevaVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -177,7 +240,21 @@
   <ItemGroup>
     <None Include="Resources\fondo2.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\list-remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialog-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -22,7 +22,7 @@ namespace AppSistemaContable
 
             Application.Run(new Form1());
             //Application.Run(new ActividadEconomica.frmPrincipalActividadEconómica());
-
+            //Application.Run(new VentasRegistroVentas.frmNuevaVenta());
 
         }
     }

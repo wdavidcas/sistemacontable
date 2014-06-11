@@ -1,6 +1,6 @@
-﻿namespace AppSistemaContable.ActividadEconomica
+﻿namespace AppSistemaContable.AdminEmpresas
 {
-    partial class frmPrincipalActividadEconómica
+    partial class frmPrincipalEmpresas
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.dgvListado = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.chxHabilitado = new DevExpress.XtraEditors.CheckEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barraHerramientasFormulario = new DevExpress.XtraBars.Bar();
             this.btnAtras = new DevExpress.XtraBars.BarLargeButtonItem();
@@ -47,43 +46,28 @@
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvListado = new System.Windows.Forms.DataGridView();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.txtBuscar = new DevExpress.XtraEditors.TextEdit();
-            this.chxHabilitado = new DevExpress.XtraEditors.CheckEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chxHabilitado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chxHabilitado.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTitulo
+            // chxHabilitado
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.Blue;
-            this.lblTitulo.Location = new System.Drawing.Point(3, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(65, 29);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Nombre";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dgvListado
-            // 
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SkyBlue;
-            this.dgvListado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableLayoutPanel1.SetColumnSpan(this.dgvListado, 3);
-            this.dgvListado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvListado.Location = new System.Drawing.Point(3, 32);
-            this.dgvListado.Name = "dgvListado";
-            this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListado.Size = new System.Drawing.Size(860, 191);
-            this.dgvListado.TabIndex = 2;
-            this.dgvListado.TabStop = false;
+            this.chxHabilitado.Location = new System.Drawing.Point(608, 3);
+            this.chxHabilitado.MenuManager = this.barManager1;
+            this.chxHabilitado.Name = "chxHabilitado";
+            this.chxHabilitado.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chxHabilitado.Properties.Appearance.Options.UseFont = true;
+            this.chxHabilitado.Properties.Caption = "Habilitado";
+            this.chxHabilitado.Size = new System.Drawing.Size(147, 23);
+            this.chxHabilitado.TabIndex = 2;
+            this.chxHabilitado.ToolTip = "Ver los registros habilitados/deshabilitados de  la lista";
             // 
             // barManager1
             // 
@@ -147,6 +131,7 @@
             this.btnNuevo.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N));
             this.btnNuevo.LargeGlyph = global::AppSistemaContable.Properties.Resources.document_new;
             this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevo_ItemClick);
             // 
             // btnEditar
             // 
@@ -186,28 +171,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(866, 87);
+            this.barDockControlTop.Size = new System.Drawing.Size(744, 87);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 310);
-            this.barDockControlBottom.Size = new System.Drawing.Size(866, 23);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 432);
+            this.barDockControlBottom.Size = new System.Drawing.Size(744, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 87);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 223);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 345);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(866, 87);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 223);
+            this.barDockControlRight.Location = new System.Drawing.Point(744, 87);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 345);
             // 
             // barEditItem1
             // 
@@ -237,8 +222,36 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(866, 223);
-            this.tableLayoutPanel1.TabIndex = 7;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(744, 345);
+            this.tableLayoutPanel1.TabIndex = 8;
+            // 
+            // dgvListado
+            // 
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SkyBlue;
+            this.dgvListado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableLayoutPanel1.SetColumnSpan(this.dgvListado, 3);
+            this.dgvListado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListado.Location = new System.Drawing.Point(3, 32);
+            this.dgvListado.Name = "dgvListado";
+            this.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListado.Size = new System.Drawing.Size(860, 310);
+            this.dgvListado.TabIndex = 2;
+            this.dgvListado.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.Blue;
+            this.lblTitulo.Location = new System.Drawing.Point(3, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(65, 29);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Nombre";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtBuscar
             // 
@@ -252,48 +265,34 @@
             this.txtBuscar.ToolTip = "Escribe el nombre a buscar";
             this.txtBuscar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
-            // chxHabilitado
-            // 
-            this.chxHabilitado.Location = new System.Drawing.Point(608, 3);
-            this.chxHabilitado.MenuManager = this.barManager1;
-            this.chxHabilitado.Name = "chxHabilitado";
-            this.chxHabilitado.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chxHabilitado.Properties.Appearance.Options.UseFont = true;
-            this.chxHabilitado.Properties.Caption = "Habilitado";
-            this.chxHabilitado.Size = new System.Drawing.Size(147, 23);
-            this.chxHabilitado.TabIndex = 2;
-            this.chxHabilitado.ToolTip = "Ver los registros habilitados/deshabilitados de  la lista";
-            // 
-            // frmPrincipalActividadEconómica
+            // frmPrincipalEmpresas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 333);
+            this.ClientSize = new System.Drawing.Size(744, 455);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Name = "frmPrincipalActividadEconómica";
+            this.Name = "frmPrincipalEmpresas";
             this.ShowIcon = false;
-            this.Text = "Listado de actividades económicas";
+            this.Text = "Listado de empresas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chxHabilitado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chxHabilitado.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.DataGridView dgvListado;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private DevExpress.XtraEditors.CheckEdit chxHabilitado;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar barraHerramientasFormulario;
         private DevExpress.XtraBars.BarLargeButtonItem btnAtras;
@@ -306,9 +305,11 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView dgvListado;
+        private System.Windows.Forms.Label lblTitulo;
+        private DevExpress.XtraEditors.TextEdit txtBuscar;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private DevExpress.XtraEditors.TextEdit txtBuscar;
-        private DevExpress.XtraEditors.CheckEdit chxHabilitado;
     }
 }
